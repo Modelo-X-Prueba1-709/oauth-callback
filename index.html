@@ -10,8 +10,12 @@
         // Extraer el código de autorización de la URL
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
-        document.getElementById('code').innerText = code;
+
+        if (code) {
+            document.getElementById('code').innerText = "Authorization Code: " + code;
+        } else {
+            document.getElementById('code').innerText = "No authorization code found.";
+        }
     </script>
 </body>
 </html>
-
