@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth 2.0 Callback</title>
+</head>
+<body>
+    <h1>Authorization Code</h1>
+    <p id="code"></p>
+    <script>
+        // Extraer el código de autorización de la URL
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        document.getElementById('code').innerText = code;
+    </script>
+</body>
+</html>
